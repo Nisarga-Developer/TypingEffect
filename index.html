@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1>Typing Animation</h1>
+
+<button onclick="typeWriter()">Start Animation</button>
+
+<p id="demo"></p>
+</center>
+<script>
+var i = 0;
+var txt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est velit egestas dui id ornare arcu odio ut. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Arcu risus quis varius quam quisque id diam. Quis hendrerit dolor magna eget est lorem ipsum dolor. Interdum velit euismod in pellentesque massa placerat duis ultricies. Feugiat pretium nibh ipsum consequat nisl vel pretium. Rhoncus urna neque viverra justo nec ultrices dui. Cursus vitae congue mauris rhoncus aenean vel. Nullam eget felis eget nunc. Mollis nunc sed id semper risus in hendrerit gravida rutrum. A cras semper auctor neque vitae tempus quam. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Maecenas pharetra convalli';
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+</body>
+</html>
